@@ -282,7 +282,7 @@ class WAHandshake(object):
         client_payload.passive = client_config.passive
         client_payload.push_name = client_config.pushname
 
-        max_int = (2**32) / 2
+        max_int = 2**31
 
         client_payload.session_id = random.randint(-max_int, max_int-1)
         client_payload.short_connect = client_config.short_connect
